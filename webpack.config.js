@@ -13,13 +13,13 @@ function walk(dir, root) {
       if (stat.isFile() && (path.extname(fullpath) === '.we' || path.extname(fullpath) === '.vue')) {
           var name = path.join(dir, path.basename(file, '.we'))
           entry[name] = fullpath + '?entry=true'
-        }
-        else if (stat.isDirectory()) {
-          var subdir = path.join(dir, file)
-          walk(subdir, root)
-        }
-      })
-  }
+      }
+      else if (stat.isDirectory()) {
+         var subdir = path.join(dir, file)
+         walk(subdir, root)
+      }
+  })
+}
   walk('./', 'src');
   module.exports = {
     entry: entry
@@ -56,4 +56,3 @@ function walk(dir, root) {
     ]
     }
   }
-}
