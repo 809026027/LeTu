@@ -14,7 +14,7 @@ npm install -g cnpm --registry=https://registry.npm.taobao.org
 安装weexpack：
 
 ```bash
-# 生成 Web 平台和 native 平台可用的 bundle 文件
+# 全局安装weexpack打包工具
 cnpm install -g weexpack
 ```
 
@@ -31,19 +31,25 @@ weexpack build ios
 weexpack build web
 ```
 
+
 ### 启动 Web 服务
 
 ```
+#启动服务后会监听 1337 端口，访问 http://127.0.0.1:1337/index.html 即可在浏览器中预览页面。
 cnpm run serve
+
+#启用服务监听，修改文件后实时预览
+webpack --watch
 ```
 
-启动服务后会监听 1337 端口，访问 http://127.0.0.1:1337/index.html 即可在浏览器中预览页面。
+
 
 ### 启动 Android 项目
 
 首先应该安装 [Android Studio](https://developer.android.com/studio/index.html) 和必要的 Android SDK，配置好基本的开发环境。
 
 使用 Android Studio 打开 `android` 目录中的项目，等待自动安装完依赖以后，即可启动模拟器或者真机预览页面。
+
 
 ### 启动 iOS 项目
 
